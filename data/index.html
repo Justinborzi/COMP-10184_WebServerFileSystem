@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Temperature App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-gray-200">
+    <div class="mx-auto my-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl">
+        <div
+          class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow mt-40 md:mt-56 lg:mt-64"
+        >
+          <div class="px-4 py-5 sm:px-6">
+            <h3>Current Temperature</h3>
+            <h1 id="curTemp">0.00°C</h1>
+            <small id="timeElapsed" class="text-sm text-gray-300">00:00</small>
+            <button
+              id="tempFormat"
+              class="float-right bg-blue-400 p-2 -my-3 rounded text-white hover:bg-blue-500 hover:text-gray-100"
+            >
+              Change Format
+            </button>
+          </div>
+          <div class="px-4 py-5 sm:p-6">
+            <canvas id="myChart" style="width: 100%; max-width: 700px"></canvas>
+          </div>
+          <div class="px-4 py-4 sm:px-6">
+            <p>Name: Justin Borzi</p>
+            <p>Student ID: 000798465</p>
+            <p id="sensorId">Sensor ID:</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./utils.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
